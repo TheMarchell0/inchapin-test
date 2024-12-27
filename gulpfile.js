@@ -21,9 +21,6 @@ import { scss } from './gulp/tasks/scss.js';
 import { js } from './gulp/tasks/js.js';
 import { images } from './gulp/tasks/images.js';
 import { otfToTtf, ttfToWoff, fontStyle } from './gulp/tasks/fonts.js';
-import { svgSprive } from './gulp/tasks/svgSprive.js';
-import { zip } from './gulp/tasks/zip.js';
-import { ftp } from './gulp/tasks/ftp.js';
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
@@ -36,10 +33,6 @@ function watcher() {
   gulp.watch(path.watch.images, images);
 }
 
-// Спрайты создаются разово, поэтому нет необходимости их включать в общий поток задач
-export { svgSprive };
-// Создание спрайта выполняется через команду npm run svgSprive.
-
 // Последовательная обработка шрифтов
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontStyle);
 
@@ -49,14 +42,10 @@ const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images)
 // Построение сценариев выполнения задач
 const build = gulp.series(reset, mainTasks);
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
-const deployZIP = gulp.series(reset, mainTasks, zip);
-const deployFTP = gulp.series(reset, mainTasks, ftp);
 
 // Экспорт сценариев для добавления в скрипт в package.json
 export { dev };
 export { build };
-export { deployZIP };
-export { deployFTP };
 // Вызов сценария командой npm run dev или npm run build
 
 // Выполнение сценария по умолчанию

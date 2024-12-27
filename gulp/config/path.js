@@ -15,10 +15,10 @@ export const path = {
     files: `${buildFolder}/files/`
   },
   src: {
-    js: `${srcFolder}/js/app.js`,
+    js: `${srcFolder}/js/main.js`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/img/**/*.svg`,
-    scss: `${srcFolder}/scss/style.scss`,
+    scss: `${srcFolder}/styles/base/main.scss`,
     html: `${srcFolder}/*.html`,// меняем расширение на pug если сборка на нём
     files: `${srcFolder}/files/**/*.*`,
     svgicons: `${srcFolder}/img/svgicons/*.svg`
@@ -34,5 +34,4 @@ export const path = {
   buildFolder: buildFolder,
   srcFolder: srcFolder,
   rootFolder: rootFolder,
-  ftp: 'test' // Папка на удалённом сервере
 };

@@ -2,7 +2,6 @@ import fileInclude from 'gulp-file-include';
 import webpHtmlNosvg from 'gulp-webp-html-nosvg';
 import versionNumber from 'gulp-version-number';
 // eslint-disable-next-line no-unused-vars
-import pug from 'gulp-pug';
 
 /* global app */
 // eslint-disable-next-line arrow-body-style
@@ -25,7 +24,7 @@ export const html = () => {
     // Показывать в терминале какой файл обработан
     //  verbose: true
     //}))
-      .pipe(app.plugins.replace(/@img\//g, 'img/'))
+      .pipe(app.plugins.replace(/@img\//g, 'images/'))
       .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg()))
       .pipe(
         app.plugins.if(
