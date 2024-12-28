@@ -10,25 +10,26 @@ export const path = {
     js: `${buildFolder}/js/`,
     css: `${buildFolder}/css/`,
     html: `${buildFolder}/`,
-    images: `${buildFolder}/img/`,
+    images: `${buildFolder}/images/`,
     fonts: `${buildFolder}/fonts/`,
-    files: `${buildFolder}/files/`
+    functions: `${buildFolder}/js/functions/`
   },
   src: {
     js: `${srcFolder}/js/main.js`,
-    images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
+    images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/img/**/*.svg`,
     scss: `${srcFolder}/styles/base/main.scss`,
-    html: `${srcFolder}/*.html`,// меняем расширение на pug если сборка на нём
-    files: `${srcFolder}/files/**/*.*`,
-    svgicons: `${srcFolder}/img/svgicons/*.svg`
+    html: `${srcFolder}/*.html`,
+    svgicons: `${srcFolder}/img/svgicons/*.svg`,
+    fonts: `${srcFolder}/fonts/**/*.*`,
+    functions: `${srcFolder}/js/functions/**/*.*`
   },
   watch: {
     js: `${srcFolder}/js/**/*.js `,
     scss: `${srcFolder}/scss/**/*.scss`,
-    html: `${srcFolder}/**/*.html`,// меняем расширение на pug если сборка на нём
+    html: `${srcFolder}/**/*.html`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
-    files: `${srcFolder}/files/**/*.*`
+    functions: `${srcFolder}/js/functions/**/*.*`
   },
   clean: buildFolder,
   buildFolder: buildFolder,

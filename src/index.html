@@ -1,27 +1,28 @@
-<!DOCTYPE html>
-<html lang="ru">
-
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>INCHAPIN</title>
+</head>
 <body>
 @@include('components/header/header.html', {})
-
-<!-- Основной контент -->
 <main>
     <h1 class="visually-hidden">Каталог товаров</h1>
-    <img src="@img/nav_imgs/Catalog.svg" alt="Logo">
-    <section class="">
-        <div class="container-big"></div>
-    </section>
-
-    <div class="common-background">
-        <section class="" id="">
-            <div class="container"></div>
-        </section>
-        <section class="" id="">
-            <div class="container"></div>
-        </section>
-    </div>
+    <picture>
+        <source
+                srcset="images/hero__img.png 1x, ../images/hero__img@2x.png 2x"
+        />
+        <img
+                src="images/hero__img.png"
+                alt="Декоративная картинка"
+                class="hero__img"
+        />
+    </picture>
 </main>
-
-<script src="script.js"></script>
+@@include('components/callForm/callForm.html', {})
+<script src="js/main.js"></script>
 </body>
 </html>
