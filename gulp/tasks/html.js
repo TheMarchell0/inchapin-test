@@ -18,8 +18,8 @@ export const html = () => {
         ),
       )
       .pipe(fileInclude())
-      .pipe(app.plugins.replace(/@img\//g, 'images/'))
         .pipe(app.plugins.replace(/(\.js)/g, '.min.js'))
+        .pipe(app.plugins.replace(/(\.css)/g, '.min.css'))
       .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg()))
       .pipe(
         app.plugins.if(
