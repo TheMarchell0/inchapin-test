@@ -1,8 +1,6 @@
 import webp from 'gulp-webp';
 import imagemin from 'gulp-imagemin';
 
-/* global app */
-// eslint-disable-next-line arrow-body-style
 export const images = () => {
   return app.gulp
     .src(app.path.src.images)

@@ -1,9 +1,7 @@
-import gulp from 'gulp'; // Основной модуль
-import { path } from './gulp/config/path.js'; // Импорт путей
-import { plugins } from './gulp/config/plugins.js'; // Импорт общих плагинов
+import gulp from 'gulp';
+import { path } from './gulp/config/path.js';
+import { plugins } from './gulp/config/plugins.js';
 
-// Передаем значения в глобальную переменную и добавляем комментарий для eslint:
-/* global global process*/
 global.app = {
   isBuild: process.argv.includes('--build'),
   isDev: !process.argv.includes('--build'),
@@ -19,6 +17,7 @@ import { server } from './gulp/tasks/server.js';
 import { scss } from './gulp/tasks/scss.js';
 import { js } from './gulp/tasks/js.js';
 import { images } from './gulp/tasks/images.js';
+import { fonts } from './gulp/tasks/fonts.js';
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
@@ -26,10 +25,11 @@ function watcher() {
   gulp.watch(path.watch.scss, scss);
   gulp.watch(path.watch.js, js);
   gulp.watch(path.watch.images, images);
+  gulp.watch(path.watch.fonts, fonts);
 }
 
 // Основные задачи
-const mainTasks = gulp.series(gulp.parallel(html, scss, js, images));
+const mainTasks = gulp.series(gulp.parallel(html, scss, js, images, fonts));
 
 // Построение сценариев выполнения задач
 const build = gulp.series(reset, mainTasks);
