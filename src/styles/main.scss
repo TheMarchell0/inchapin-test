@@ -1,6 +1,7 @@
 /*Common styles*/
 @import "base/fonts.css";
 @import "vendor/normalize.css";
+@import "helpers/variables";
 
 * {
   font-family: "Proxima Nova", "Arial", sans-serif;
@@ -16,7 +17,7 @@ main {
 }
 
 body {
-  background-color: #F5F5F5;
+  background-color: $bodyBackground;
   overflow-x: hidden;
   -webkit-overflow-scrolling: auto;
 }
