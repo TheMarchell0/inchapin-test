@@ -20,6 +20,7 @@ export const html = () => {
       .pipe(fileInclude())
         .pipe(app.plugins.replace(/(\.js)/g, '.min.js'))
         .pipe(app.plugins.replace(/(\.css)/g, '.min.css'))
+        .pipe(app.plugins.replace(/\/styles\//g, '/css/')) // Заменяем /styles/ на /css/
       .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg()))
       .pipe(
         app.plugins.if(

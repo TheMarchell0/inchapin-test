@@ -48,10 +48,6 @@ ul {
     margin: 0;
 }
 
-p, h2 {
-    margin: 0;
-}
-
 /* Grouping content
    ========================================================================== */
 
@@ -146,6 +142,17 @@ sub {
 
 sup {
     top: -0.5em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
 }
 
 /* Embedded content
