@@ -1,12 +1,13 @@
-import dartSass from 'sass';
+import * as gulp from 'gulp';
+import * as sass from 'sass';
 import gulpSass from 'gulp-sass';
 import rename from 'gulp-rename';
-import cleanCss from 'gulp-clean-css'; // Сжатие CSS файла
-import webpcss from 'gulp-webpcss'; // Вывод WEBP изображений
-import autoprefixer from 'gulp-autoprefixer'; // Добавление вендорных префиксов
-import groupCssMediaQueries from 'gulp-group-css-media-queries'; // Группировка медиа запросов
+import cleanCss from 'gulp-clean-css';
+import webpcss from 'gulp-webpcss';
+import autoprefixer from 'gulp-autoprefixer';
+import groupCssMediaQueries from 'gulp-group-css-media-queries';
 
-const sass = gulpSass(dartSass);
+const sassCompiler = gulpSass(sass);
 
 export const scss = () => {
 	return app.gulp
@@ -21,7 +22,7 @@ export const scss = () => {
 		)
 		.pipe(app.plugins.replace(/@img\//g, '../images/'))
 		.pipe(
-			sass({
+			sassCompiler({
 				outputStyle: 'expanded',
 			}),
 		)
