@@ -14,19 +14,21 @@ export const path = {
     fonts: `${buildFolder}/fonts/`,
   },
   src: {
-    js: `${srcFolder}/js/main.js`,
+    js: `${srcFolder}/js/**/*.js`,
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,webp}`,
-    svg: `${srcFolder}/img/**/*.svg`,
-    scss: `${srcFolder}/styles/**/*.*`,
+    svg: `${srcFolder}/images/**/*.svg`,
+    scss: `${srcFolder}/styles/**/*.scss`,
+    components: `${srcFolder}/components/**/*.*`,
     html: `${srcFolder}/*.html`,
-    svgicons: `${srcFolder}/img/svgicons/*.svg`,
+    svgicons: `${srcFolder}/images/svgicons/*.svg`,
     fonts: `${srcFolder}/fonts/**/*.*`
   },
   watch: {
-    js: `${srcFolder}/js/**/*.js `,
-    scss: `${srcFolder}/styles/**/*.*`,
+    js: `${srcFolder}/js/**/*.js`,
+    scss: `${srcFolder}/styles/**/*.scss`,
+    components: `${srcFolder}/components/**/*.*`,
     html: `${srcFolder}/**/*.html`,
-    images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
+    images: `${srcFolder}/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
     fonts: `${srcFolder}/fonts/**/*.*`
   },
   clean: buildFolder,
