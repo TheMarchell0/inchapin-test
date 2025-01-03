@@ -6,10 +6,10 @@ import replace from 'gulp-replace';
 
 export const js = () => {
     return gulp
-        .src(app.path.src.functions)
+        .src(app.path.src.js) // Путь к основному файлу
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest(app.path.build.functions))
+        .pipe(gulp.dest(app.path.build.js)) // Сохранение минифицированного файла
         .on('end', () => {
             gulp
                 .src(app.path.src.js) // Путь к основному файлу
