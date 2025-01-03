@@ -1,10 +1,7 @@
 import fileInclude from 'gulp-file-include';
 import webpHtmlNosvg from 'gulp-webp-html-nosvg';
 import versionNumber from 'gulp-version-number';
-// eslint-disable-next-line no-unused-vars
 
-/* global app */
-// eslint-disable-next-line arrow-body-style
 export const html = () => {
     return (
         app.gulp
