@@ -1,2 +1,2 @@
-@import 'blocks/hero';
-@import 'blocks/about';
+@use 'blocks/hero' as *;
+@use 'blocks/about' as *;

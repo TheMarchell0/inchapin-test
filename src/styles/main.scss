@@ -1,7 +1,7 @@
 /*Common styles*/
-@import "base/fonts";
-@import "vendor/normalize";
-@import "helpers/variables";
+@use "base/fonts" as *;
+@use "vendor/normalize" as *;
+@use "helpers/variables" as *;
 
 * {
   font-family: "Proxima Nova", "Arial", sans-serif;
