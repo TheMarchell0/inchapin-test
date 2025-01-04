@@ -8,8 +8,8 @@ const jsProcess = () => {
     return gulp
         .src(['src/js/**/*.js', '!src/js/**/_*.js'])
         .pipe(plumber())
-        .pipe(uglify())
-        .pipe(rename({ suffix: '.min' }))
+        .pipe(app.isBuild ? uglify() : gulp.dest(app.path.build.js))
+        .pipe(rename({ suffix: app.isBuild ? '.min' : '' }))
         .pipe(gulp.dest(app.path.build.js));
 };
 
@@ -21,7 +21,7 @@ const jsBundle = () => {
             webpack({
                 mode: app.isBuild ? 'production' : 'development',
                 output: {
-                    filename: 'main.min.js',
+                    filename: app.isBuild ? 'main.min.js' : 'main.js',
                 },
             }),
         )

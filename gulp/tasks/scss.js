@@ -48,7 +48,8 @@ export const scss = () => {
 		.pipe(app.plugins.if(app.isBuild, cleanCss()))
 		.pipe(
 			rename({
-				extname: '.min.css',
+				suffix: app.isBuild ? '.min' : '', // Добавляем суффикс .min только при сборке
+				extname: '.css',
 			}),
 		)
 		.pipe(app.gulp.dest(app.path.build.css))

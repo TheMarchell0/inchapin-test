@@ -1,6 +1,7 @@
 import fileInclude from 'gulp-file-include';
 import webpHtmlNosvg from 'gulp-webp-html-nosvg';
 import versionNumber from 'gulp-version-number';
+import htmlmin from 'gulp-htmlmin';
 
 export const html = () => {
     return (
@@ -16,9 +17,9 @@ export const html = () => {
             )
             .pipe(fileInclude())
             .pipe(app.plugins.replace(/<link rel="stylesheet" href="styles/g, '<link rel="stylesheet" href="css'))
-            .pipe(app.plugins.replace(/(\.js)/g, '.min.js'))
-            .pipe(app.plugins.replace(/(\.css)/g, '.min.css'))
-            .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg()))
+            .pipe(app.plugins.replace(/(\.js)/g, app.isBuild ? '.min.js' : '.js')) // Заменяем на .min.js только при сборке
+            .pipe(app.plugins.replace(/(\.css)/g, app.isBuild ? '.min.css' : '.css')) // Заменяем на .min.css только при сборке
+            .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg())) // Выполняем webpHtmlNosvg только при сборке
             .pipe(
                 app.plugins.if(
                     app.isBuild,
@@ -35,8 +36,8 @@ export const html = () => {
                     }),
                 ),
             )
+            .pipe(app.plugins.if(app.isBuild, htmlmin({ collapseWhitespace: true }))) // Минификация HTML только при сборке
             .pipe(app.gulp.dest(app.path.build.html))
             .pipe(app.plugins.browsersync.stream())
     );
 };
-
