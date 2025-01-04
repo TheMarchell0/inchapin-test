@@ -1,5 +1,28 @@
-<header>
+<header class="header">
     <div class="header__container container">
-        ХЕДЕР
+        <div class="header__content content">
+            <div class="header__menu">
+                <span class="header__menu-decor"></span>
+                <span class="header__menu-text">Меню</span>
+            </div>
+            <div class="header__select select">
+                <select class="data__form-column-select select js-select js-input"
+                        name="Выбрать квартиру">
+                    <option value="Не выбрано" selected>Выбрать квартиру</option>
+                    <option value="Квартира 1">Квартира 1</option>
+                    <option value="Квартира 2">Квартира 2</option>
+                    <option value="Квартира 3">Квартира 3</option>
+                    <option value="Квартира 4">Квартира 4</option>
+                    <option value="Квартира 5">Квартира 5</option>
+                </select>
+            </div>
+            <img
+                    src="images/header-logo.svg"
+                    alt="Логотип INCHAPIN"
+                    class="header__logo"
+            />
+            <a href="tel:+74955272121" class="header__tel">+7 495 527 21 21</a>
+            <button class="header__call js-modal-trigger">Заказать звонок</button>
+        </div>
     </div>
 </header>

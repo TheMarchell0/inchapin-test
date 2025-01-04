@@ -20,9 +20,10 @@
 <body>
 @@include('components/header/header.html', {})
 <main>
+    <h1 class="visually-hidden">INCHAPIN - Дом бизнес-класса для&nbsp;ценителей роскоши</h1>
+    <h2 class="visually-hidden">Уютное и&nbsp;безопасное пространство для&nbsp;счастливой, спокойной и&nbsp;размеренной жизни</h2>
     <section class="hero">
         <div class="hero__container container">
-            <p>текст hero</p>
             <picture>
                 <source
                         srcset="images/hero-img.png 1x, ../images/hero-img@2x.png 2x"
@@ -33,11 +34,49 @@
                         class="hero__img"
                 />
             </picture>
+            <div class="hero__content content">
+                <p class="hero__title">Дом бизнес-класса для&nbsp;ценителей роскоши</p>
+                <img
+                        src="images/hero-figure.svg"
+                        alt="INCHAPIN"
+                        class="hero__figure"
+                        width="862"
+                />
+            </div>
         </div>
     </section>
     <section class="about">
         <div class="about__container container">
-            <p>текст about</p>
+            <div class="about__content content">
+                <div class="about__content-decor">
+                    <p class="about__content-decor-title">О&nbsp;проекте</p>
+                    <picture>
+                        <source
+                                srcset="images/about-img.png 1x, ../images/about-img@2x.png 2x"
+                        />
+                        <img
+                                src="images/about-img.png"
+                                alt="Декоративная картинка"
+                                class="about__decor-img"
+                        />
+                    </picture>
+                    <img
+                            src="images/circle-logo.svg"
+                            alt="Логотип"
+                            class="about__content-decor-logo"
+                    />
+                </div>
+                <div class="about__content-info">
+                    <p class="about__content-info-title">Уютное и&nbsp;безопасное пространство для&nbsp;счастливой, <span>спокойной и&nbsp;размеренной жизни</span></p>
+                    <p class="about__content-info-text"><span>Квартиры от&nbsp;65 до&nbsp;356&nbsp;м&nbsp;<sup>2</sup> с&nbsp;чистовой отделкой,</span> балконами, лоджиями и&nbsp;террасами в&nbsp;собственной закрытой охраняемой территории.</p>
+                    <div class="about__content-info-video">
+                        <p class="about__content-info-video-title">Видео о&nbsp;проекте <span>1:25 минут</span></p>
+                        <button class="about__content-info-video-button">
+                            <span>Play</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </main>

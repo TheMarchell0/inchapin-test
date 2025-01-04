@@ -1,6 +1,47 @@
-header {
-  background: blue;
+@use "helpers/variables" as *;
+
+.header {
   max-width: 1760px;
   width: 100%;
   margin: 0 auto;
+
+  &__content {
+    align-items: center;
+  }
+
+  &__menu {
+    display: flex;
+
+    &-decor {
+      display: block;
+      width: 38px;
+      height: 2px;
+      background-color: $mainColor;
+    }
+
+    &-text {
+      color: $black1;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 1;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__tel {
+    color: $black1;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 1;
+  }
+
+  &__call {
+    color: $mainColor;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+  }
 }

@@ -1,8 +1,9 @@
 import {createFormValidation} from "./functions/createFormValidation.js";
 import {componentsFunctions} from "./helpers/_components.js";
+import {createSelect} from "./functions/createSelect.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-    createFormValidation();
+    createSelect();
     componentsFunctions();
-    console.log('main.js')
+    createFormValidation();
 });

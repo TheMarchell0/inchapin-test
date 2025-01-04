@@ -1,5 +1,14 @@
 @use "../../../helpers/variables" as *;
 
 .hero {
-  background: red;
+
+  &__title {
+    color: $mainColor;
+    font-weight: 400;
+    font-size: 31px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    max-width: 416px;
+    width: 100%;
+  }
 }

@@ -1,5 +1,77 @@
 @use "../../../helpers/variables" as *;
 
 .about {
-  background: green;
+
+  &__content {
+    justify-content: space-between;
+
+    &-decor {
+      flex: 0 1 733px;
+      position: relative;
+
+      &-title {
+        color: $mainColor;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 1.4;
+        text-transform: uppercase;
+        text-align: right;
+        margin-bottom: 35px;
+      }
+
+      &-logo {
+        position: absolute;
+        z-index: 1;
+        right: -132px;
+        top: 173px;
+      }
+    }
+
+    &-info {
+
+      &-title,
+      &-text {
+        color: $black1;
+        font-weight: 400;
+        text-transform: uppercase;
+        max-width: 587px;
+        width: 100%;
+      }
+
+      &-title span,
+      &-text span {
+        color: $mainColor;
+      }
+
+      &-title {
+        font-size: 34px;
+        line-height: 1.4;
+      }
+
+      &-text {
+        font-size: 20px;
+        line-height: 1.6;
+      }
+
+      &-video {
+
+        &-title {
+          color: $black1;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 1.6;
+          text-transform: uppercase;
+
+          & span {
+            color: $gray;
+            display: block;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.6;
+            text-transform: initial;
+          }
+        }
+      }
+    }
+  }
 }
