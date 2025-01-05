@@ -54,6 +54,8 @@
       }
 
       &-video {
+        display: flex;
+        background: url('/images/about-button-bg.png') no-repeat center;
 
         &-title {
           color: $black1;
@@ -73,5 +75,13 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
+  .world-map-bg::before,
+  .world-map-bg.double::after {
+    background: url('/images/about-button-bg@2x.png') no-repeat center;
+    background-size: cover;
   }
 }

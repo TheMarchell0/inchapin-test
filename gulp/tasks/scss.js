@@ -23,6 +23,7 @@ export const scss = () => {
 		.pipe(
 			sassCompiler({
 				outputStyle: 'expanded',
+				includePaths: ['node_modules'],
 			}),
 		)
 		.pipe(app.plugins.if(app.isBuild, groupCssMediaQueries()))
@@ -48,7 +49,7 @@ export const scss = () => {
 		.pipe(app.plugins.if(app.isBuild, cleanCss()))
 		.pipe(
 			rename({
-				suffix: app.isBuild ? '.min' : '', // Добавляем суффикс .min только при сборке
+				suffix: app.isBuild ? '.min' : '',
 				extname: '.css',
 			}),
 		)

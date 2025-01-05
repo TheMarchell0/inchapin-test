@@ -1,4 +1,4 @@
-const choicesInstances = [];
+import Choices from "choices.js";
 
 export function createSelect() {
     const selects = document.querySelectorAll('.js-select');
@@ -11,12 +11,5 @@ export function createSelect() {
             openState: 'is-open',
             shouldSort: false,
         });
-        choicesInstances.push(choices);
     }
-}
-
-export function clearSelect() {
-    choicesInstances.forEach(choices => {
-        choices.setChoiceByValue('Не выбран');
-    });
 }
