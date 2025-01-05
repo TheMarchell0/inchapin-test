@@ -1,0 +1,20 @@
+@use "../helpers/variables" as *;
+
+.choices {
+
+  &__inner {
+    background-color: $mainColor;
+    border-radius: 119px;
+    font-size: 15px;
+    min-height: 53px;
+  }
+
+  &__item {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}

@@ -7,6 +7,7 @@
 
   &__content {
     align-items: center;
+    margin: 40px 0 38px;
   }
 
   &__menu {
@@ -27,6 +28,10 @@
       letter-spacing: 0.7px;
       text-transform: uppercase;
     }
+  }
+
+  &__select-wrapper {
+    max-width: 242px;
   }
 
   &__tel {
