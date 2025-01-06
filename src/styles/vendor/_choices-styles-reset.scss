@@ -2,12 +2,53 @@
 
 .choices {
 
+  &[data-type*=select-one]::after {
+    width: 14px;
+    height: 15px;
+    background: url('/images/select-arrow.svg') no-repeat center;
+    border-style: initial;
+    border-color: initial;
+    margin-top: initial;
+    border-width: initial;
+    right: 27px;
+    top: 19px;
+  }
+
+  &[data-type*=select-one].is-open::after {
+    margin-top: initial;
+    border-color: initial;
+    transform: rotate(180deg);
+  }
+
   &__inner {
     background-color: $mainColor;
     border-radius: 119px;
     font-size: 15px;
     min-height: 53px;
+    padding: 17px 25px;
+    border: initial;
+
+    .is-open  & {
+      border-radius: 27px 27px 0 0;
+    }
   }
+
+  &__list {
+
+    &--single {
+      padding: 0;
+    }
+
+    &--dropdown, &[aria-expanded] {
+      background-color: $mainColor;
+
+      .is-open & {
+        border-radius: 0 0 27px 27px;
+        border: initial;
+      }
+    }
+  }
+
 
   &__item {
     font-weight: 600;
@@ -16,5 +57,18 @@
     letter-spacing: 0.8px;
     text-transform: uppercase;
     color: #fff;
+
+    .choices__list--dropdown &[data-value="Выбрать квартиру"] {
+      display: none;
+    }
+  }
+
+  &__list--dropdown &__item--selectable.is-highlighted, &__list[aria-expanded] &__item--selectable.is-highlighted {
+    transition: 0.1s linear;
+    background-color: #225dad;
+  }
+
+  &__list--dropdown &__item, &__list[aria-expanded] &__item {
+    padding: 10px 25px;
   }
 }

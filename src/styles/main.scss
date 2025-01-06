@@ -6,6 +6,7 @@
 @use "helpers/components" as *;
 @use "helpers/variables" as *;
 @use "UI/select" as *;
+@use "UI/modal" as *;
 
 * {
   font-family: "Proxima Nova", "Arial", sans-serif;

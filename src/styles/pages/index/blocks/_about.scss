@@ -1,6 +1,7 @@
 @use "../../../helpers/variables" as *;
 
 .about {
+  margin-bottom: 56px;
 
   &__content {
     justify-content: space-between;
@@ -109,21 +110,69 @@
         }
 
         &-button {
-          background: url('/images/about-button-bg.png') no-repeat center;
           max-width: 241px;
           width: 100%;
           height: 241px;
           border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          overflow: hidden;
+
+          &:hover {
+
+            &::before {
+              transform: scale(1.1);
+            }
+          }
+
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('/images/about-button-bg.png') no-repeat center;
+            transition: 0.2s linear;
+
+            @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
+              background: url('/images/about-button-bg@2x.png') no-repeat center;
+              background-size: cover;
+            }
+          }
+
+          & span {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.6;
+            text-transform: uppercase;
+            color: $white;
+            padding-left: 17px;
+            position: relative;
+            width: 142px;
+            height: 142px;
+            border: 1px solid $white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::before {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 62px;
+              left: 37px;
+              width: 13px;
+              height: 14px;
+              background: url('/images/play-icon.svg') no-repeat center;
+            }
+          }
         }
       }
     }
-  }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
-  .world-map-bg::before,
-  .world-map-bg.double::after {
-    background: url('/images/about-button-bg@2x.png') no-repeat center;
-    background-size: cover;
   }
 }
