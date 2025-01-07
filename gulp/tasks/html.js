@@ -36,7 +36,7 @@ export const html = () => {
                     }),
                 ),
             )
-            .pipe(app.plugins.if(app.isBuild, htmlmin({ collapseWhitespace: true }))) // Минификация HTML только при сборке
+            .pipe(app.plugins.if(app.isBuild, htmlmin({ collapseWhitespace: true })))
             .pipe(app.gulp.dest(app.path.build.html))
             .pipe(app.plugins.browsersync.stream())
     );
