@@ -1,1 +1,22 @@
-<p class="callform">аказать звонок</p>
+<div class="call-form form">
+    <div class="call-form__wrapper form__wrapper">
+        <h2 class="call-form__title form__title">Заказать звонок</h2>
+        <div class="call-form__form-item js-form-item form__item required">
+            <input class="call-form__input js-input input" id="call-form-name" type="text"
+                   placeholder="">
+            <label for="call-form-name" class="call-form__label label">Ваше имя</label>
+        </div>
+        <div class="call-form__form-item js-form-item form__item required" data-input-type="phone">
+            <input class="call-form__input js-input input" id="call-form-phone" type="text"
+                   placeholder="" inputmode="numeric">
+            <label for="call-form-phone" class="call-form__label label">Телефон</label>
+        </div>
+        <div class="call-form__form-item js-form-item form__item required" data-input-type="email">
+            <input class="call-form__input js-input input" id="call-form-email" type="text"
+                   placeholder="" inputmode="email">
+            <label for="call-form-email" class="call-form__label label">E-mail</label>
+        </div>
+        <p class="call-form__notice form__notice">Нажимая на&nbsp;кнопку «Отправить», вы ознакомлены и&nbsp;соглашаетесь с&nbsp;<a href="https://inchapin-test.vercel.app/" target="_blank">политикой обработки персональных данных</a></p>
+        <button type="submit" class="call-form__notice-button form__button js-submit-button">Отправить</button>
+    </div>
+</div>

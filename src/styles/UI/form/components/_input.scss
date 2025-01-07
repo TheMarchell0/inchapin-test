@@ -1,0 +1,21 @@
+@use "helpers/variables" as *;
+
+.input {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.6;
+  color: $black0;
+  padding: 29px 1px 10px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.error .input {
+  border: 1px solid #c30000;
+  color: #c30000;
+}

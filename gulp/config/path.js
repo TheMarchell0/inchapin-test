@@ -12,6 +12,7 @@ export const path = {
     html: `${buildFolder}/`,
     images: `${buildFolder}/images/`,
     fonts: `${buildFolder}/fonts/`,
+    videos: `${buildFolder}/videos/`
   },
   src: {
     js: `${srcFolder}/js/**/*.js`,
@@ -21,7 +22,8 @@ export const path = {
     components: `${srcFolder}/components/**/*.*`,
     html: `${srcFolder}/*.html`,
     svgicons: `${srcFolder}/images/svgicons/*.svg`,
-    fonts: `${srcFolder}/fonts/**/*.*`
+    fonts: `${srcFolder}/fonts/**/*.*`,
+    videos: `${srcFolder}/videos/**/*.mp4`
   },
   watch: {
     js: `${srcFolder}/js/**/*.js`,
@@ -29,7 +31,8 @@ export const path = {
     components: `${srcFolder}/components/**/*.*`,
     html: `${srcFolder}/**/*.html`,
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
-    fonts: `${srcFolder}/fonts/**/*.*`
+    fonts: `${srcFolder}/fonts/**/*.*`,
+    videos: `${srcFolder}/videos/**/*.mp4`
   },
   clean: buildFolder,
   buildFolder: buildFolder,

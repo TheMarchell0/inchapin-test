@@ -71,7 +71,7 @@
                     <p class="about__content-info-text"><span>Квартиры от&nbsp;65 до&nbsp;356&nbsp;м&nbsp;<sup>2</sup> с&nbsp;чистовой отделкой,</span> балконами, лоджиями и&nbsp;террасами в&nbsp;собственной закрытой охраняемой территории.</p>
                     <div class="about__content-info-video">
                         <p class="about__content-info-video-title">Видео о&nbsp;проекте <span>1:25 минут</span></p>
-                        <button class="about__content-info-video-button">
+                        <button class="about__content-info-video-button js-modal-trigger" data-open-modal="video-modal">
                             <span>Play</span>
                         </button>
                     </div>
@@ -80,7 +80,26 @@
         </div>
     </section>
 </main>
-@@include('components/callForm/callForm.html', {})
+<div class="call-modal modal js-modal" id="call-modal">
+    <div class="call-modal__wrapper modal__wrapper">
+        <img
+                src="images/close-icon.svg"
+                alt="Закрыть"
+                class="call-modal__close modal__close js-close-modal"
+        />
+        @@include('components/callForm/callForm.html', {})
+    </div>
+</div>
+<div class="video-modal modal js-modal js-video-modal" id="video-modal">
+    <div class="video-modal__wrapper modal__wrapper">
+        <img
+                src="images/close-icon.svg"
+                alt="Закрыть"
+                class="video-modal__close modal__close js-close-modal"
+        />
+        <video src="videos/video.mp4" controls muted loop class="js-video"></video>
+    </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>

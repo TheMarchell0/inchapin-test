@@ -1,6 +1,7 @@
 @use "../../../helpers/variables" as *;
 
 .hero {
+  padding-top: 131px;
   min-height: 100vh;
 
   &__content {

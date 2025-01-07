@@ -27,9 +27,14 @@
     min-height: 53px;
     padding: 17px 25px;
     border: initial;
+    transition: 0.1s linear background-color;
 
     .is-open  & {
       border-radius: 27px 27px 0 0;
+    }
+
+    &:hover {
+      background-color: #225dad;
     }
   }
 

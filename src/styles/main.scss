@@ -1,4 +1,3 @@
-/*Common styles*/
 @use "base/fonts" as *;
 @use "vendor/normalize" as *;
 @use "vendor/dependencies" as *;
@@ -6,6 +5,7 @@
 @use "helpers/components" as *;
 @use "helpers/variables" as *;
 @use "UI/select" as *;
+@use "UI/form/form" as *;
 @use "UI/modal" as *;
 
 * {

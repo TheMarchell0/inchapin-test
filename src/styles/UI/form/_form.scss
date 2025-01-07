@@ -1,0 +1,85 @@
+@use "components/label" as *;
+@use "components/input" as *;
+
+@use "helpers/variables" as *;
+
+.form {
+  max-width: 587px;
+  width: 100%;
+  margin: 197px auto 0;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    color: $black0;
+    margin-bottom: 50px;
+  }
+  
+  &__item {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #CCCCCC;
+
+    &:not(:last-of-type) {
+      margin-bottom: 19px;
+    }
+
+    &.required::after {
+      content: 'Обязательное поле';
+      display: block;
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      color: #c30000;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1;
+      opacity: 0;
+      transition: 0.2s linear;
+    }
+
+    &.error::after {
+      opacity: 1;
+    }
+  }
+
+  &__notice {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+    color: $black0;
+    opacity: 0.5;
+    margin: 50px 0 30px;
+    max-width: 420px;
+    width: 100%;
+
+    & a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  &__button {
+    background-color: $mainColor;
+    max-width: 234px;
+    width: 100%;
+    border-radius: 100px;
+    padding: 24px 69px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    color: $white;
+  }
+}

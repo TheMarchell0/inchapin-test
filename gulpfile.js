@@ -19,6 +19,7 @@ import { components } from './gulp/tasks/components.js';
 import { js } from './gulp/tasks/js.js';
 import { images } from './gulp/tasks/images.js';
 import { fonts } from './gulp/tasks/fonts.js';
+import {videos} from "./gulp/tasks/videos.js";
 
 // Функция для отслеживания изменений
 function watcher() {
@@ -29,10 +30,11 @@ function watcher() {
     gulp.watch(path.watch.scss, scss);
     gulp.watch(path.watch.components, scss);
     gulp.watch(path.watch.components, js);
+    gulp.watch(path.watch.videos, videos);
 }
 
 // Основные задачи
-const mainTasks = gulp.series(gulp.parallel(html, scss, js, images, fonts, components));
+const mainTasks = gulp.series(gulp.parallel(html, scss, js, images, fonts, components, videos));
 
 const build = gulp.series(reset, mainTasks);
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));

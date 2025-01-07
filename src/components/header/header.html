@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header js-header">
     <div class="header__container container">
         <div class="header__content content">
             <div class="header__menu">
@@ -16,13 +16,15 @@
                     <option value="Квартира 5">Квартира 5</option>
                 </select>
             </div>
-            <img
-                    src="images/header-logo.svg"
-                    alt="Логотип INCHAPIN"
-                    class="header__logo"
-            />
+            <div class="header__logo-wrapper">
+                <img
+                        src="images/header-logo.svg"
+                        alt="Логотип INCHAPIN"
+                        class="header__logo"
+                />
+            </div>
             <a href="tel:+74955272121" class="header__tel">+7 495 527 21 21</a>
-            <button class="header__call js-modal-trigger">Заказать звонок</button>
+            <button class="header__call js-modal-trigger" data-open-modal="call-modal">Заказать звонок</button>
         </div>
     </div>
 </header>
