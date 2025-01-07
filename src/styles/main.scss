@@ -104,3 +104,12 @@ button {
 .content {
   display: flex;
 }
+
+.smooth-container {
+  height: 100vh;
+  overflow: hidden;
+
+  .no-scroll & {
+    height: initial;
+  }
+}

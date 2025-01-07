@@ -9,14 +9,13 @@
   left: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100%;
   background: rgba(50, 50, 50, 0.20);
   backdrop-filter: blur(15px);
 
   &.active {
-    z-index: 1000;
+    z-index: 1001;
     opacity: 1;
     visibility: visible;
   }

@@ -1,4 +1,5 @@
-const body = document.body;
+const body = document.body,
+    header = document.querySelector('.js-header');
 
 export function modalFunctional() {
     const triggerButtons = document.querySelectorAll('.js-modal-trigger'),
@@ -36,6 +37,7 @@ export function modalFunctional() {
 }
 
 function openModal(modal) {
+    header.classList.add('hidden');
     modal.classList.add('active', 'modal-anim-open');
     lockScroll();
     modal.classList.remove('modal-anim-close');
@@ -47,6 +49,7 @@ function openModal(modal) {
 
 function closeModal(modal) {
     if (modal) {
+        header.classList.remove('hidden');
         modal.classList.replace('modal-anim-open', 'modal-anim-close');
         modal.addEventListener('animationend', () => {
             modal.classList.remove('active', 'modal-anim-close');
@@ -61,12 +64,9 @@ function closeModal(modal) {
 }
 
 function lockScroll() {
-    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-    body.style.paddingRight = `${scrollbarWidth}px`;
     body.classList.add('no-scroll');
 }
 
 function unlockScroll() {
-    body.style.paddingRight = '';
     body.classList.remove('no-scroll');
 }
