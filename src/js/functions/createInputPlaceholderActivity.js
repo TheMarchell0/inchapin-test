@@ -2,8 +2,8 @@ export function createInputPlaceholderActivity() {
     const inputWrappers = document.querySelectorAll('.js-form-item');
 
     for (let inputWrapper of inputWrappers) {
-        const input = inputWrapper.querySelector('.input');
-        const label = inputWrapper.querySelector('.label');
+        const input = inputWrapper.querySelector('.js-input');
+        const label = inputWrapper.querySelector('.js-label');
 
         if (input) {
             input.addEventListener('focus', () => {

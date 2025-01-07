@@ -44,6 +44,7 @@
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-html-replace": "^1.6.2",
     "gulp-uglify": "^3.0.2",
-    "gulp-webpcss": "^1.1.1"
+    "gulp-webpcss": "^1.1.1",
+    "inputmask": "^5.0.9"
   }
 }
