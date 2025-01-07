@@ -46,7 +46,6 @@ export const scss = () => {
 				}),
 			),
 		)
-		.pipe(app.plugins.if(app.isBuild, cleanCss()))
 		.pipe(
 			rename({
 				suffix: app.isBuild ? '.min' : '',
