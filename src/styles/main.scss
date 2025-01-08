@@ -4,7 +4,7 @@
 @use "vendor/choices-styles-reset" as *;
 @use "helpers/components" as *;
 @use "helpers/variables" as *;
-@use "UI/select" as *;
+@use "UI/doubleHover" as *;
 @use "UI/form/form" as *;
 @use "UI/modal" as *;
 @use "UI/video" as *;
@@ -44,6 +44,7 @@ ul {
 a {
   transition: 0.2s linear;
   text-decoration: none;
+  outline: none;
 }
 
 a:hover,
@@ -53,6 +54,7 @@ button:hover {
 
 img {
   pointer-events: none;
+  width: 100%;
 }
 
 sup {
@@ -97,9 +99,13 @@ button {
 }
 
 .container {
-  padding: 0 80px;
+  padding: 0 40px;
   margin: 0 auto;
   max-width: 1920px;
+
+  @media (min-width: $desktop) {
+    padding: 0 80px;
+  }
 }
 
 .content {

@@ -26,22 +26,24 @@
             жизни</h2>
         <section class="hero">
             <div class="hero__container container">
-                <picture>
-                    <source
-                            srcset="images/hero-img.png 1x, ../images/hero-img@2x.png 2x"
-                    />
-                    <img
-                            src="images/hero-img.png"
-                            alt="Декоративная картинка"
-                            class="hero__img"
-                    />
-                </picture>
+                <div class="hero__img-wrapper">
+                    <picture>
+                        <source
+                                srcset="images/hero-img.png 1x, ../images/hero-img@2x.png 2x"
+                        />
+                        <img
+                                src="images/hero-img.png"
+                                alt="Декоративная картинка"
+                                class="hero__img"
+                        />
+                    </picture>
+                </div>
                 <div class="hero__content content">
                     <p class="hero__content-title">Дом бизнес-класса для&nbsp;ценителей роскоши</p>
                     <img
                             src="images/hero-figure.svg"
                             alt="INCHAPIN"
-                            class="hero__figure"
+                            class="hero__content-figure"
                             width="862"
                     />
                 </div>
@@ -52,16 +54,18 @@
                 <div class="about__content content">
                     <div class="about__content-decor">
                         <p class="about__content-decor-title">О&nbsp;проекте</p>
-                        <picture>
-                            <source
-                                    srcset="images/about-img.png 1x, ../images/about-img@2x.png 2x"
-                            />
-                            <img
-                                    src="images/about-img.png"
-                                    alt="Декоративная картинка"
-                                    class="about__decor-img"
-                            />
-                        </picture>
+                        <div class="about__content-decor-img-wrapper">
+                            <picture>
+                                <source
+                                        srcset="images/about-img.png 1x, ../images/about-img@2x.png 2x"
+                                />
+                                <img
+                                        src="images/about-img.png"
+                                        alt="Декоративная картинка"
+                                        class="about__content-decor-img"
+                                />
+                            </picture>
+                        </div>
                         <img
                                 src="images/circle-logo.svg"
                                 alt="Логотип"

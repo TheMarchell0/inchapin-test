@@ -1,36 +1,84 @@
 @use "../../../helpers/variables" as *;
 
 .about {
-  margin-bottom: 56px;
+  margin-bottom: 40px;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 56px;
+  }
 
   &__content {
     justify-content: space-between;
 
     &-decor {
-      flex: 0 1 733px;
+      flex: 0 1 567px;
       position: relative;
+
+      @media (min-width: $desktop) {
+        flex: 0 1 733px;
+      }
 
       &-title {
         color: $mainColor;
         font-weight: 400;
-        font-size: 17px;
+        font-size: 13px;
         line-height: 1.4;
         text-transform: uppercase;
         text-align: right;
-        margin-bottom: 35px;
+        margin-bottom: 27px;
+
+        @media (min-width: $desktop) {
+          font-size: 17px;
+          margin-bottom: 35px;
+        }
+      }
+
+      &-img {
+        position: absolute;
+        width: 1086px;
+        top: -2px;
+        left: -259px;
+
+        @media (min-width: $desktop) {
+          width: 1354px;
+          top: -2px;
+          left: -308px;
+        }
+
+        &-wrapper {
+          height: 720px;
+          overflow: hidden;
+          position: relative;
+
+          @media (min-width: $desktop) {
+            height: 900px;
+          }
+        }
       }
 
       &-logo {
         position: absolute;
         z-index: 1;
-        right: -132px;
-        top: 173px;
+        right: -101px;
+        top: 133px;
+        max-width: 200px;
+
+        @media (min-width: $desktop) {
+          max-width: 259px;
+          right: -132px;
+          top: 173px;
+        }
       }
     }
 
     &-info {
-      margin-top: 133px;
-      flex: 0 1 734px;
+      margin-top: 101px;
+      flex: 0 1 567px;
+
+      @media (min-width: $desktop) {
+        margin-top: 133px;
+        flex: 0 1 734px;
+      }
 
       &-title,
       &-text {
@@ -47,11 +95,21 @@
       }
 
       &-title {
-        font-size: 34px;
+        font-size: 26px;
         line-height: 1.4;
         position: relative;
-        padding-top: 78px;
-        margin-bottom: 120px;
+        padding-top: 59px;
+        margin-bottom: 100px;
+
+        @media (min-width: $desktop) {
+          font-size: 34px;
+          padding-top: 78px;
+          margin-bottom: 120px;
+        }
+
+        @media (max-width: $desktop) {
+          max-width: 477px;
+        }
 
         &::before {
           content: '';
@@ -60,65 +118,100 @@
           top: 0;
           left: 0;
           background-color: $mainColor;
-          width: 63px;
-          height: 12px;
+          width: 49px;
+          height: 9px;
           border-radius: 2px;
+
+          @media (min-width: $desktop) {
+            width: 63px;
+            height: 12px;
+          }
         }
       }
 
       &-text {
-        font-size: 20px;
+        font-size: 16px;
         line-height: 1.6;
+
+        @media (min-width: $desktop) {
+          font-size: 20px;
+        }
+
+        @media (max-width: $desktop) {
+          max-width: 504px;
+        }
       }
 
       &-video {
         display: flex;
         margin-top: 100px;
-        max-width: 587px;
+        max-width: 456px;
         justify-content: space-between;
         align-items: center;
         position: relative;
+
+        @media (min-width: $desktop) {
+          max-width: 587px;
+        }
 
         &::before {
           content: '';
           display: block;
           position: absolute;
           top: 50%;
-          left: 186px;
+          left: 146px;
           transform: translateY(-50%);
           background-color: #D7D7D7;
-          width: 140px;
+          width: 109px;
           height: 1px;
+
+          @media (min-width: $desktop) {
+            left: 186px;
+            width: 140px;
+          }
         }
 
         &-title {
           color: $black1;
           font-weight: 600;
-          font-size: 18px;
+          font-size: 14px;
           line-height: 1.6;
           text-transform: uppercase;
           margin-top: 30px;
+
+          @media (min-width: $desktop) {
+            font-size: 18px;
+          }
 
           & span {
             color: $gray;
             display: block;
             font-weight: 400;
-            font-size: 18px;
+            font-size: 14px;
             line-height: 1.6;
             text-transform: initial;
+
+            @media (min-width: $desktop) {
+              font-size: 18px;
+            }
           }
         }
 
         &-button {
-          max-width: 241px;
+          max-width: 186px;
           width: 100%;
-          height: 241px;
+          height: 186px;
           border-radius: 50%;
           display: flex;
           justify-content: center;
           align-items: center;
           position: relative;
           overflow: hidden;
+
+          @media (min-width: $desktop) {
+            max-width: 241px;
+            height: 241px;
+          }
 
           &:hover {
 
@@ -146,29 +239,42 @@
 
           & span {
             font-weight: 400;
-            font-size: 18px;
+            font-size: 14px;
             line-height: 1.6;
             text-transform: uppercase;
             color: $white;
             padding-left: 17px;
             position: relative;
-            width: 142px;
-            height: 142px;
+            width: 110px;
+            height: 110px;
             border: 1px solid $white;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
 
+            @media (min-width: $desktop) {
+              width: 142px;
+              height: 142px;
+              font-size: 18px;
+            }
+
             &::before {
               content: '';
               display: block;
               position: absolute;
-              top: 62px;
-              left: 37px;
-              width: 13px;
-              height: 14px;
+              top: 49px;
+              left: 29px;
+              width: 10px;
+              height: 11px;
               background: url('/images/play-icon.svg') no-repeat center;
+
+              @media (min-width: $desktop) {
+                top: 62px;
+                left: 37px;
+                width: 13px;
+                height: 14px;
+              }
             }
           }
         }

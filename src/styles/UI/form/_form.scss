@@ -4,9 +4,14 @@
 @use "helpers/variables" as *;
 
 .form {
-  max-width: 587px;
+  max-width: 454px;
   width: 100%;
-  margin: 197px auto 0;
+  margin: 142px auto 100px;
+
+  @media (min-width: $desktop) {
+    max-width: 587px;
+    margin: 197px auto 100px;
+  }
 
   &__content {
     width: 100%;
@@ -17,12 +22,17 @@
 
   &__title {
     font-weight: 400;
-    font-size: 52px;
+    font-size: 40px;
     line-height: 1.2;
     text-transform: uppercase;
     text-align: center;
     color: $black0;
-    margin-bottom: 50px;
+    margin-bottom: 21px;
+
+    @media (min-width: $desktop) {
+      font-size: 52px;
+      margin-bottom: 50px;
+    }
   }
 
   &__item {
@@ -31,7 +41,11 @@
     border-bottom: 1px solid #CCCCCC;
 
     &:not(:last-of-type) {
-      margin-bottom: 19px;
+      margin-bottom: 11px;
+
+      @media (min-width: $desktop) {
+        margin-bottom: 19px;
+      }
     }
 
     &.required::after {
@@ -71,14 +85,20 @@
 
   &__notice {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.4;
     text-align: center;
     color: $black0;
     opacity: 0.5;
-    margin: 50px 0 30px;
+    margin: 50px 0 28px;
     max-width: 420px;
     width: 100%;
+
+    @media (min-width: $desktop) {
+      font-size: 14px;
+      max-width: 485px;
+      margin: 50px 0 30px;
+    }
 
     & a {
       color: inherit;
@@ -88,16 +108,21 @@
 
   &__button {
     background-color: $mainColor;
-    max-width: 234px;
+    max-width: 228px;
     width: 100%;
     border-radius: 100px;
     padding: 24px 69px;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1;
     letter-spacing: 0.7px;
     text-transform: uppercase;
     color: $white;
+
+    @media (min-width: $desktop) {
+      max-width: 234px;
+      font-size: 15px;
+    }
   }
 
   &__send-message {

@@ -2,7 +2,7 @@
 
 .label {
   font-weight: 400;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.6;
   text-transform: uppercase;
   color: $black0;
@@ -12,6 +12,10 @@
   transition: top 0.3s, font-size 0.3s;
   z-index: 100;
   pointer-events: none;
+
+  @media (min-width: $desktop) {
+    font-size: 17px;
+  }
 
   &.active {
     top: 12px;

@@ -5,16 +5,11 @@
                 <span class="header__menu-decor"></span>
                 <span class="header__menu-text">Меню</span>
             </div>
-            <div class="header__select-wrapper select-wrapper">
-                <select class="data__form-column-select select js-select js-input"
-                        name="Выбрать квартиру">
-                    <option value="Выбрать квартиру" selected>Выбрать квартиру</option>
-                    <option value="Квартира 1">Квартира 1</option>
-                    <option value="Квартира 2">Квартира 2</option>
-                    <option value="Квартира 3">Квартира 3</option>
-                    <option value="Квартира 4">Квартира 4</option>
-                    <option value="Квартира 5">Квартира 5</option>
-                </select>
+            <div class="header__select">
+                <div class="js-double-hover double-hover">
+                    <span class="header__select-text double-hover__main-text js-double-hover-main-text">Выбрать квартиру</span>
+                    <span class="header__select-text double-hover__double-text js-double-hover-double-text"></span>
+                </div>
             </div>
             <div class="header__logo-wrapper">
                 <img
@@ -24,7 +19,10 @@
                 />
             </div>
             <a href="tel:+74955272121" class="header__tel">+7 495 527 21 21</a>
-            <button class="header__call js-modal-trigger" data-open-modal="call-modal">Заказать звонок</button>
+            <button class="header__call js-modal-trigger js-double-hover double-hover" data-open-modal="call-modal">
+                <span class="double-hover__main-text js-double-hover-main-text">Заказать звонок</span>
+                <span class="double-hover__double-text js-double-hover-double-text"></span>
+            </button>
         </div>
     </div>
 </header>

@@ -15,8 +15,14 @@
   }
 
   &__content {
-    width: 100%;
+    width: 89%;
+    margin: 0 auto;
+    display: block;
     height: 100%;
+
+    @media (min-width: $desktop) {
+      width: 100%;
+    }
   }
 
   &__close {
@@ -26,14 +32,18 @@
     z-index: 1003;
     cursor: pointer;
     transition: 0.1s linear;
+    pointer-events: initial;
+    max-width: 26px;
 
     &:hover {
       opacity: 0.3;
     }
 
-    &.hidden{
+    &.hidden {
       opacity: 0;
       visibility: hidden;
+      cursor: initial;
+      pointer-events: none;
     }
   }
 }

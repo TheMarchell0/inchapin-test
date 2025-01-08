@@ -54,7 +54,7 @@ export function fullVideoPlay() {
     });
 
     videoBlock.addEventListener('mouseover', () => {
-        closeButton.classList.add('active');
+        closeButton.classList.remove('hidden');
         resetInactivityTimer();
     });
 
@@ -63,14 +63,14 @@ export function fullVideoPlay() {
     });
 
     videoBlock.addEventListener('mousemove', () => {
-        closeButton.classList.add('active');
+        closeButton.classList.remove('hidden');
         resetInactivityTimer();
     });
 
     function resetInactivityTimer() {
         clearTimeout(inactivityTimeout);
         inactivityTimeout = setTimeout(() => {
-            closeButton.classList.remove('active');
+            closeButton.classList.add('hidden');
         }, 2500);
     }
 }

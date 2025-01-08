@@ -1,23 +1,66 @@
 @use "../../../helpers/variables" as *;
 
 .hero {
-  padding-top: 131px;
+  padding-top: 100px;
   min-height: 100vh;
+
+  @media (min-width: $desktop) {
+    padding-top: 131px;
+  }
+
+  &__img {
+    position: absolute;
+    width: 1389px;
+    top: -168px;
+    left: -28px;
+
+    @media (min-width: $desktop) {
+      width: 1920px;
+      top: -227px;
+      left: -1px;
+    }
+
+    &-wrapper {
+      height: 506px;
+      overflow: hidden;
+      position: relative;
+
+      @media (min-width: $desktop) {
+        height: 600px;
+      }
+    }
+  }
 
   &__content {
     justify-content: space-between;
     align-items: flex-end;
-    margin-top: 46px;
+    margin-top: 40px;
+
+    @media (min-width: $desktop) {
+      margin-top: 46px;
+    }
 
     &-title {
       color: $mainColor;
       font-weight: 400;
-      font-size: 31px;
+      font-size: 26px;
       line-height: 1.4;
       text-transform: uppercase;
       max-width: 416px;
       width: 100%;
-      transform: translateY(12px); //для полного соответствия макету
+
+      @media (min-width: $desktop) {
+        font-size: 31px;
+        transform: translateY(12px); //для полного соответствия макету
+      }
+    }
+
+    &-figure {
+      max-width: 717px;
+
+      @media (min-width: $desktop) {
+        max-width: 862px;
+      }
     }
   }
 }

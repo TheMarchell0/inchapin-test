@@ -1,0 +1,36 @@
+@use "helpers/variables" as *;
+
+.double-hover {
+  position: relative;
+  overflow: hidden;
+  height: 13px;
+
+  @media (min-width: $desktop) {
+    height: 15px;
+  }
+
+  &__main-text,
+  &__double-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: transform 0.4s ease;
+  }
+
+  &__double-text {
+    transform: translateY(100%);
+  }
+
+  &:hover {
+    opacity: initial;
+  }
+
+  &:hover &__main-text {
+    transform: translateY(-100%);
+  }
+
+  &:hover &__double-text {
+    transform: translateY(0);
+  }
+}

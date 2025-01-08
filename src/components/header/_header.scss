@@ -25,19 +25,29 @@
   &__content {
     justify-content: space-between;
     align-items: center;
-    margin: 40px 0 38px;
+    margin: 28px 0 29px;
+
+    @media (min-width: $desktop) {
+      margin: 40px 0 38px;
+    }
   }
 
   &__menu {
     display: flex;
-    height: 17px;
+    height: 14px;
     position: relative;
+    cursor: pointer;
+
+    @media (min-width: $desktop) {
+      height: 17px;
+    }
 
     &::before,
     &::after {
       content: '';
       position: absolute;
       left: 0;
+      transition: 0.1s linear;
     }
 
     &::before {
@@ -53,9 +63,23 @@
     &::before,
     &::after {
       display: block;
-      width: 38px;
+      width: 32px;
       height: 2px;
       background-color: $mainColor;
+
+      @media (min-width: $desktop) {
+        width: 38px;
+      }
+    }
+
+    &:hover {
+      &::before {
+        top: -3px;
+      }
+
+      &::after {
+        bottom: -3px;
+      }
     }
 
     &-decor {
@@ -65,37 +89,111 @@
     &-text {
       color: $black1;
       font-weight: 600;
-      font-size: 15px;
+      font-size: 13px;
       line-height: 1;
       letter-spacing: 0.7px;
       text-transform: uppercase;
-      margin-left: 16px;
+      margin-left: 12px;
+
+      @media (min-width: $desktop) {
+        font-size: 15px;
+        margin-left: 16px;
+      }
     }
   }
 
-  &__select-wrapper {
-    max-width: 242px;
+  &__select {
+    position: relative;
+    background-color: $mainColor;
+    border-radius: 100px;
+    min-height: 43px;
+    padding: 15px 20px;
+    max-width: 203px;
+    width: 100%;
+    cursor: pointer;
+
+    @media (min-width: $desktop) {
+      min-height: 51px;
+      max-width: 240px;
+      border-radius: 119px;
+      padding: 17px 25px;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 12px;
+      height: 13px;
+      background: url('/images/select-arrow.svg') no-repeat center;
+      right: 20px;
+      top: 14px;
+
+      @media (min-width: $desktop) {
+        width: 14px;
+        height: 15px;
+        right: 26px;
+        top: 18px;
+      }
+    }
+
+    &-text {
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 1;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #fff;
+      top: 18px;
+      left: 26px;
+
+      @media (min-width: $desktop) {
+        font-size: 15px;
+      }
+    }
   }
 
   &__logo-wrapper {
-    flex: 0 0 54%;
+    flex: 0 0 48%;
     display: flex;
     justify-content: center;
+
+    @media (min-width: $desktop) {
+      flex: 0 0 54%;
+    }
+
+    & img {
+      max-width: 156px;
+
+      @media (min-width: $desktop) {
+        max-width: 187px;
+      }
+    }
   }
 
   &__tel {
     color: $black1;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 14px;
     line-height: 1;
+
+    @media (min-width: $desktop) {
+      font-size: 17px;
+    }
   }
 
   &__call {
     color: $mainColor;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1;
     letter-spacing: 0.9px;
     text-transform: uppercase;
+    max-width: 157px;
+    width: 100%;
+
+    @media (min-width: $desktop) {
+      font-size: 15px;
+    }
   }
 }
