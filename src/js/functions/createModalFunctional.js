@@ -41,10 +41,6 @@ function openModal(modal) {
     modal.classList.add('active', 'modal-anim-open');
     lockScroll();
     modal.classList.remove('modal-anim-close');
-    if (modal.classList.contains('js-video-modal')) {
-        const video = modal.querySelector('.js-video');
-        video.play();
-    }
 }
 
 function closeModal(modal) {
@@ -55,11 +51,6 @@ function closeModal(modal) {
             modal.classList.remove('active', 'modal-anim-close');
             unlockScroll();
         }, {once: true});
-        if (modal.classList.contains('js-video-modal')) {
-            const video = modal.querySelector('.js-video');
-            video.pause();
-            video.currentTime = 0;
-        }
     }
 }
 

@@ -5,6 +5,7 @@ import {modalFunctional} from "./functions/createModalFunctional.js";
 import {fixedHeaderFunctional} from "./functions/createFixedHeaderFunctional.js";
 import {createInputPlaceholderActivity} from "./functions/createInputPlaceholderActivity.js";
 import {phoneMaskInitialization} from "./functions/phoneMaskInitialization.js";
+import {fullVideoPlay} from "./functions/fullVideoPlay.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     fixedHeaderFunctional();
@@ -14,4 +15,5 @@ document.addEventListener("DOMContentLoaded", function () {
     createInputPlaceholderActivity();
     createFormFunctional();
     phoneMaskInitialization();
+    fullVideoPlay();
 });

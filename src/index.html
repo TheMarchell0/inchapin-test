@@ -76,8 +76,7 @@
                             балконами, лоджиями и&nbsp;террасами в&nbsp;собственной закрытой охраняемой территории.</p>
                         <div class="about__content-info-video">
                             <p class="about__content-info-video-title">Видео о&nbsp;проекте <span>1:25 минут</span></p>
-                            <button class="about__content-info-video-button js-modal-trigger"
-                                    data-open-modal="video-modal">
+                            <button class="about__content-info-video-button js-video-trigger">
                                 <span>Play</span>
                             </button>
                         </div>
@@ -97,15 +96,13 @@
         @@include('components/callForm/callForm.html', {})
     </div>
 </div>
-<div class="video-modal modal js-modal js-video-modal" id="video-modal">
-    <div class="video-modal__wrapper modal__wrapper">
-        <img
-                src="images/close-icon.svg"
-                alt="Закрыть"
-                class="video-modal__close modal__close js-close-modal"
-        />
-        <video src="videos/video.mp4" controls muted loop class="js-video"></video>
-    </div>
+<div class="video js-video-wrapper">
+    <img
+            src="images/close-icon-white.svg"
+            alt="Закрыть"
+            class="video__close js-video-close"
+    />
+    <video class="video__content js-video" src="videos/video.mp4" controls muted loop></video>
 </div>
 <script src="js/main.js"></script>
 </body>

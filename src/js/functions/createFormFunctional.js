@@ -9,8 +9,6 @@ export function createFormFunctional() {
             submitButton = form.querySelector('.js-submit-button'),
             sendMessage = form.querySelector('.js-form-send-message');
 
-        console.log(sendMessage)
-
         inputItems.forEach((inputItem) => {
             const input = inputItem.querySelector('.js-input');
 
@@ -64,6 +62,7 @@ export function createFormFunctional() {
 
         if (allValid) {
             let consoleResult = '';
+
             for (let inputItem of inputItems) {
                 const labelText = inputItem.querySelector('.js-label').innerText;
                 const formattedLabelText = labelText.charAt(0).toUpperCase() + labelText.slice(1).toLowerCase();
@@ -71,9 +70,13 @@ export function createFormFunctional() {
 
                 consoleResult += `${formattedLabelText}: ${inputText}\n`;
             }
+
             console.log(consoleResult);
-            sendMessage.classList.add('active');
-            setTimeout(()=> sendMessage.classList.remove('active'), 3000);
+
+            if (!sendMessage.classList.contains('active')) {
+                sendMessage.classList.add('active');
+                setTimeout(() => sendMessage.classList.remove('active'), 3000);
+            }
             clearFormFields(inputItems);
         }
     }
