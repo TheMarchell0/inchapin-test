@@ -6,7 +6,10 @@ export function createFormFunctional() {
 
     for (let form of forms) {
         const inputItems = form.querySelectorAll('.js-form-item'),
-            submitButton = form.querySelector('.js-submit-button');
+            submitButton = form.querySelector('.js-submit-button'),
+            sendMessage = form.querySelector('.js-form-send-message');
+
+        console.log(sendMessage)
 
         inputItems.forEach((inputItem) => {
             const input = inputItem.querySelector('.js-input');
@@ -29,7 +32,7 @@ export function createFormFunctional() {
                 }
             });
 
-            checkAllFieldsValid(inputItems);
+            checkAllFieldsValid(inputItems, sendMessage);
         });
     }
 
@@ -54,7 +57,7 @@ export function createFormFunctional() {
     }
 
 
-    function checkAllFieldsValid(inputItems) {
+    function checkAllFieldsValid(inputItems, sendMessage) {
         const allValid = Array.from(inputItems).every((input) => {
             return !input.classList.contains('error') && !input.classList.contains('email-error') && !input.classList.contains('phone-error');
         });
@@ -69,6 +72,8 @@ export function createFormFunctional() {
                 consoleResult += `${formattedLabelText}: ${inputText}\n`;
             }
             console.log(consoleResult);
+            sendMessage.classList.add('active');
+            setTimeout(()=> sendMessage.classList.remove('active'), 3000);
             clearFormFields(inputItems);
         }
     }
