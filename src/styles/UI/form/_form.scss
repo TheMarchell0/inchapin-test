@@ -18,6 +18,16 @@
     max-width: 370px;
   }
 
+  @media (max-width: $mobile) {
+    margin: 214px auto 100px;
+    max-width: 440px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    margin: 52px auto;
+    max-width: 100%;
+  }
+
   &__content {
     width: 100%;
     display: flex;
@@ -44,6 +54,12 @@
       line-height: 1.4;
       margin-bottom: 20px;
     }
+
+    @media (max-width: $mobileSmall) {
+      font-size: 20px;
+      text-align: left;
+      margin-left: 10px;
+    }
   }
 
   &__item {
@@ -60,6 +76,10 @@
 
       @media (max-width: $tablet) {
         margin-bottom: 16px;
+      }
+
+      @media (max-width: $mobileSmall) {
+        margin-bottom: 30px;
       }
     }
 
@@ -121,6 +141,16 @@
       margin: 51px 0 31px;
     }
 
+    @media (max-width: $mobile) {
+      max-width: 380px;
+    }
+
+    @media (max-width: $mobileSmall) {
+      font-size: 12px;
+      max-width: 320px;
+      margin: 41px 0 19px;
+    }
+
     & a {
       color: inherit;
       text-decoration: underline;
@@ -129,6 +159,10 @@
     & br {
       @media (max-width: $tablet) {
         display: none;
+      }
+
+      @media (max-width: $mobileSmall) {
+        display: block;
       }
     }
   }
@@ -155,6 +189,11 @@
       max-width: 170px;
       padding: 20px 25px;
     }
+
+    @media (max-width: $mobileSmall) {
+      font-size: 11px;
+      padding: 18px 25px;
+    }
   }
 
   &__send-message {
@@ -170,6 +209,21 @@
 
     &.active {
       top: 20px;
+
+      @media (max-width: $mobile) {
+        top: 10px;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      padding: 12px;
+    }
+
+    @media (max-width: $mobile) {
+      max-width: 64%;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
     }
   }
 }

@@ -11,8 +11,22 @@
     margin-bottom: 29px;
   }
 
+  @media (max-width: $mobileSmall) {
+    margin-bottom: 20px;
+  }
+
+  &__container {
+    @media (max-width: $mobile) {
+      padding: 0 40px 0 0;
+    }
+  }
+
   &__content {
     justify-content: space-between;
+
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+    }
 
     &-decor {
       flex: 0 1 567px;
@@ -27,7 +41,18 @@
       }
 
       @media (max-width: $tablet) {
-        flex: 0 1 408px;
+        flex: 0 1 39.844vw;
+        margin-right: 96px;
+      }
+
+      @media (max-width: $mobile) {
+        flex: 0 1 290px;
+      }
+
+      @media (max-width: $mobileSmall) {
+        flex: initial;
+        max-width: 296px;
+        width: 100%;
       }
 
       &-title {
@@ -47,6 +72,14 @@
         @media (max-width: $tablet) {
           font-size: 11px;
           margin-bottom: 21px;
+        }
+
+        @media (max-width: $mobile) {
+          margin-bottom: 19px;
+        }
+
+        @media (max-width: $mobileSmall) {
+          margin-bottom: 10px;
         }
       }
 
@@ -68,6 +101,16 @@
           left: -179px;
         }
 
+        @media (max-width: $mobile) {
+          width: 612px;
+          left: -161px;
+        }
+
+        @media (max-width: $mobileSmall) {
+          width: 602px;
+          left: -110px;
+        }
+
         &-wrapper {
           height: 720px;
           overflow: hidden;
@@ -79,6 +122,14 @@
 
           @media (max-width: $tablet) {
             height: 513px;
+          }
+
+          @media (max-width: $mobile) {
+            height: 409px;
+          }
+
+          @media (max-width: $mobileSmall) {
+            height: 403px;
           }
         }
       }
@@ -102,9 +153,23 @@
         }
 
         @media (max-width: $tablet) {
-          max-width: 148px;
+          max-width: 14.454vw;
           top: 96px;
-          right: -74px;
+          right: -7vw;
+        }
+
+        @media (max-width: $mobile) {
+          max-width: 81px;
+          height: 81px;
+          top: 94px;
+          right: -40px;
+        }
+
+        @media (max-width: $mobile) {
+          max-width: 87px;
+          height: 87px;
+          top: 86px;
+          right: -44px;
         }
       }
     }
@@ -124,6 +189,18 @@
 
       @media (max-width: $tablet) {
         margin-top: 76px;
+      }
+
+      @media (max-width: $mobile) {
+        flex: 0 1 344px;
+        margin-top: 50px;
+      }
+
+      @media (max-width: $mobileSmall) {
+        flex: initial;
+        margin-top: 55px;
+        margin-left: 20px;
+        width: 100%;
       }
 
       &-title,
@@ -162,6 +239,17 @@
           max-width: 334px;
           padding-top: 41px;
           margin-bottom: 68px;
+        }
+
+        @media (max-width: $mobile) {
+          padding-top: 37px;
+          margin-bottom: 21px;
+        }
+
+        @media (max-width: $mobileSmall) {
+          font-size: 16px;
+          line-height: 1.5;
+          margin-bottom: 39px;
         }
 
         &::before {
@@ -204,6 +292,10 @@
           max-width: 334px;
           line-height: 1.8;
         }
+
+        @media (max-width: $mobileSmall) {
+          font-size: 11px;
+        }
       }
 
       &-video {
@@ -221,6 +313,14 @@
         @media (max-width: $tablet) {
           margin-top: 60px;
           max-width: 334px;
+        }
+
+        @media (max-width: $mobile) {
+          margin-top: 31px;
+        }
+
+        @media (max-width: $mobileSmall) {
+          margin-top: 21px
         }
 
         &::before {
@@ -242,6 +342,10 @@
           @media (max-width: $tablet) {
             left: 113px;
             width: 69px;
+          }
+
+          @media (max-width: $mobileSmall) {
+            width: 59px;
           }
         }
 
@@ -301,6 +405,11 @@
             height: 133px;
           }
 
+          @media (max-width: $mobileSmall) {
+            max-width: 131px;
+            height: 131px;
+          }
+
           &:hover {
 
             &::before {
@@ -354,6 +463,12 @@
               padding-left: 8px;
             }
 
+            @media (max-width: $tablet) {
+              width: 77px;
+              height: 77px;
+              padding-left: 8px;
+            }
+
             &::before {
               content: '';
               display: block;
@@ -377,6 +492,11 @@
                 height: 8px;
                 top: 35px;
                 left: 20px;
+              }
+
+              @media (max-width: $mobileSmall) {
+                top: 32px;
+                left: 19px;
               }
             }
           }

@@ -21,9 +21,19 @@
     font-size: 14px;
   }
 
+  @media (max-width: $mobileSmall) {
+    font-size: 11px;
+    top: 11px;
+  }
+
   &.active {
     top: 12px;
     font-size: 12px;
+
+    @media (max-width: $mobileSmall) {
+      top: 0px;
+      font-size: 7px;
+    }
   }
 
   .error & {

@@ -62,6 +62,11 @@ sup {
   top: -7px;
   left: -5px;
   margin-right: -5px;
+
+  @media (max-width: $desktop) {
+    left: -3px;
+    margin-right: -2px;
+  }
 }
 
 button {
@@ -113,6 +118,10 @@ button {
 
   @media (max-width: $mobile) {
     padding: 0 40px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    padding: 0 20px;
   }
 }
 

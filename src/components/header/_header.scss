@@ -37,6 +37,10 @@
     @media (max-width: $mobile) {
       margin: 40px 0;
     }
+
+    @media (max-width: $mobileSmall) {
+      margin: 19px 0;
+    }
   }
 
   &__menu {
@@ -81,6 +85,10 @@
       @media (min-width: $desktop) {
         width: 38px;
       }
+
+      @media (max-width: $mobileSmall) {
+        background-color: $black0;
+      }
     }
 
     &:hover {
@@ -118,6 +126,10 @@
       @media (max-width: $mobile) {
         font-size: 12px;
       }
+
+      @media (max-width: $mobileSmall) {
+        display: none;
+      }
     }
   }
 
@@ -145,6 +157,10 @@
     @media (max-width: $mobile) {
       max-width: 188px;
       order: 1;
+    }
+
+    @media (max-width: $mobileSmall) {
+      display: none;
     }
 
     &::after {
@@ -203,8 +219,16 @@
       flex: 0 0 36%;
     }
 
+    @media (min-width: 769px) and (max-width: 1023px) {
+      flex: 0 0 20%;
+    }
+
     @media (max-width: $mobile) {
       flex: 0 0 28%;
+    }
+
+    @media (max-width: $mobileSmall) {
+      flex: 0 0 46%;
     }
 
     & img {
@@ -212,6 +236,14 @@
 
       @media (min-width: $desktop) {
         max-width: 187px;
+      }
+
+      @media (min-width: 769px) and (max-width: 1023px) {
+        max-width: 100px;
+      }
+
+      @media (max-width: $mobileSmall) {
+        max-width: 131px;
       }
     }
   }
@@ -254,6 +286,12 @@
       order: -1;
     }
 
+    @media (max-width: $mobileSmall) {
+      order: 0;
+      max-width: 41px;
+      border: 1px solid $mainColor;
+    }
+
     &.double-hover {
       @media (max-width: $mobile) {
         height: 43px;
@@ -270,6 +308,11 @@
       width: 14px;
       height: 13.98px;
       background: url("/images/phone-icon.svg") no-repeat center;
+      display: none;
+
+      @media (max-width: $mobile) {
+        display: block;
+      }
     }
 
     & span {
