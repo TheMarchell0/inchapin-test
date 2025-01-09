@@ -127,7 +127,7 @@
         font-size: 12px;
       }
 
-      @media (max-width: $mobileSmall) {
+      @media (max-width: 767px) {
         display: none;
       }
     }
@@ -159,7 +159,7 @@
       order: 1;
     }
 
-    @media (max-width: $mobileSmall) {
+    @media (max-width: 767px) {
       display: none;
     }
 
@@ -286,7 +286,7 @@
       order: -1;
     }
 
-    @media (max-width: $mobileSmall) {
+    @media (max-width: 767px) {
       order: 0;
       max-width: 41px;
       border: 1px solid $mainColor;

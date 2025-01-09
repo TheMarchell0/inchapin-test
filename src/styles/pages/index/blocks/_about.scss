@@ -24,8 +24,12 @@
   &__content {
     justify-content: space-between;
 
-    @media (max-width: $mobileSmall) {
+    @media (max-width: $mobile) {
       flex-direction: column;
+    }
+
+    @media (min-width: 361px) and (max-width: 767px) {
+      align-items: center;
     }
 
     &-decor {
@@ -49,10 +53,11 @@
         flex: 0 1 290px;
       }
 
-      @media (max-width: $mobileSmall) {
+      @media (max-width: 767px) {
         flex: initial;
         max-width: 296px;
         width: 100%;
+        margin-right: 0;
       }
 
       &-title {
@@ -165,7 +170,7 @@
           right: -40px;
         }
 
-        @media (max-width: $mobile) {
+        @media (max-width: $mobileSmall) {
           max-width: 87px;
           height: 87px;
           top: 86px;
