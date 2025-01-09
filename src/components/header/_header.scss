@@ -3,7 +3,6 @@
 .header {
   position: fixed;
   z-index: 1000;
-  max-width: 1920px;
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
@@ -30,6 +29,14 @@
     @media (min-width: $desktop) {
       margin: 40px 0 38px;
     }
+
+    @media (max-width: $tablet) {
+      margin: 30px 0 20px;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 40px 0;
+    }
   }
 
   &__menu {
@@ -40,6 +47,10 @@
 
     @media (min-width: $desktop) {
       height: 17px;
+    }
+
+    @media (max-width: $mobile) {
+      order: -2;
     }
 
     &::before,
@@ -99,6 +110,14 @@
         font-size: 15px;
         margin-left: 16px;
       }
+
+      @media (max-width: $tablet) {
+        font-size: 13px;
+      }
+
+      @media (max-width: $mobile) {
+        font-size: 12px;
+      }
     }
   }
 
@@ -117,6 +136,15 @@
       max-width: 240px;
       border-radius: 119px;
       padding: 17px 25px;
+    }
+
+    @media (max-width: $tablet) {
+      max-width: 192px;
+    }
+
+    @media (max-width: $mobile) {
+      max-width: 188px;
+      order: 1;
     }
 
     &::after {
@@ -150,6 +178,10 @@
       @media (min-width: $desktop) {
         font-size: 15px;
       }
+
+      @media (max-width: $tablet) {
+        font-size: 12px;
+      }
     }
   }
 
@@ -160,6 +192,19 @@
 
     @media (min-width: $desktop) {
       flex: 0 0 54%;
+    }
+
+
+    @media (max-width: $desktopLow) {
+      flex: 0 0 30%
+    }
+
+    @media (max-width: $tablet) {
+      flex: 0 0 36%;
+    }
+
+    @media (max-width: $mobile) {
+      flex: 0 0 28%;
     }
 
     & img {
@@ -180,6 +225,14 @@
     @media (min-width: $desktop) {
       font-size: 17px;
     }
+
+    @media (max-width: $tablet) {
+      font-size: 13px;
+    }
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 
   &__call {
@@ -191,9 +244,46 @@
     text-transform: uppercase;
     max-width: 157px;
     width: 100%;
+    text-align: right;
+    position: relative;
 
-    @media (min-width: $desktop) {
-      font-size: 15px;
+    @media (max-width: $mobile) {
+      border: 1px solid #d7d7d7;
+      border-radius: 50%;
+      max-width: 43px;
+      order: -1;
+    }
+
+    &.double-hover {
+      @media (max-width: $mobile) {
+        height: 43px;
+      }
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 14px;
+      height: 13.98px;
+      background: url("/images/phone-icon.svg") no-repeat center;
+    }
+
+    & span {
+      @media (min-width: $desktop) {
+        font-size: 15px;
+      }
+
+      @media (max-width: $tablet) {
+        font-size: 12px;
+      }
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
     }
   }
 }

@@ -35,6 +35,11 @@
     &:hover {
       opacity: 0.4;
     }
+
+    @media (max-width: $tablet) {
+      top: 50px;
+      right: 50px;
+    }
   }
 
   &__wrapper {

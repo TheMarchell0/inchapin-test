@@ -17,6 +17,10 @@
     font-size: 17px;
   }
 
+  @media (max-width: $tablet) {
+    font-size: 14px;
+  }
+
   &.active {
     top: 12px;
     font-size: 12px;

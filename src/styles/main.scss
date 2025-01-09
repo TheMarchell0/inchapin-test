@@ -10,7 +10,7 @@
 @use "UI/video" as *;
 
 * {
-  font-family: "Proxima Nova", "Arial", sans-serif;
+  font-family: "ProximaNova", "Arial", sans-serif;
 }
 
 *, :after, :before {
@@ -105,6 +105,14 @@ button {
 
   @media (min-width: $desktop) {
     padding: 0 80px;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 0 40px;
   }
 }
 

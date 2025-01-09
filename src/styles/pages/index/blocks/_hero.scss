@@ -2,15 +2,19 @@
 
 .hero {
   padding-top: 100px;
-  min-height: 100vh;
+  margin-bottom: 80px;
 
   @media (min-width: $desktop) {
     padding-top: 131px;
   }
 
+  @media (min-width: $mobile) {
+    min-height: 100vh;
+  }
+
   &__img {
     position: absolute;
-    width: 1389px;
+    width: calc(100% + 28px);
     top: -168px;
     left: -28px;
 
@@ -20,6 +24,12 @@
       left: -1px;
     }
 
+    @media (max-width: $tablet) {
+      width: 964px;
+      top: -71px;
+      left: 0px;
+    }
+
     &-wrapper {
       height: 506px;
       overflow: hidden;
@@ -27,6 +37,10 @@
 
       @media (min-width: $desktop) {
         height: 600px;
+      }
+
+      @media (max-width: $tablet) {
+        height: 411px;
       }
     }
   }
@@ -38,6 +52,10 @@
 
     @media (min-width: $desktop) {
       margin-top: 46px;
+    }
+
+    @media (max-width: $tablet) {
+      margin-top: 30px;
     }
 
     &-title {
@@ -53,6 +71,12 @@
         font-size: 31px;
         transform: translateY(12px); //для полного соответствия макету
       }
+
+      @media (max-width: $tablet) {
+        font-size: 19px;
+        max-width: 255px;
+        transform: translate(20px, 5px); //тоже для полного соответствия макету
+      }
     }
 
     &-figure {
@@ -60,6 +84,10 @@
 
       @media (min-width: $desktop) {
         max-width: 862px;
+      }
+
+      @media (max-width: $desktopLow) {
+        max-width: 554px;
       }
     }
   }
